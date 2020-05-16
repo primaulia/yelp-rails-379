@@ -5,10 +5,18 @@
 
 <%= link_to 'Write your review', new_restaurant_review_path(@resto) %>
 
-<div class="row">
-  <% @resto.reviews.each do |review| %>
-    <div class="col-4">
-      <h4><%= review.content %> - <%= review.rating %></h4>      
-    </div>
-  <% end %>  
+<div class="my-3">
+  <div class="row">
+    <% @resto.reviews.each do |review| %>
+      <div class="col-4">
+        <div class="card">
+        <div class="card-body">
+          <p class="card-text">
+            <%= review.content %> <span class="badge badge-primary"><%= review.rating %></span>
+          </p>
+        </div>
+      </div>      
+      </div>
+    <% end %>  
+  </div>  
 </div>
