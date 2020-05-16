@@ -1,0 +1,12 @@
+<h3>Write your review</h3>
+
+<!-- form -->
+
+<%= simple_form_for [@reviewed_resto, @new_review] do |f| %>
+    <%=  f.input :content %>
+    <%=  f.input :rating %>
+    <%=  f.button :submit, class: 'btn btn-primary' %>
+<% end %>
+
+
+
